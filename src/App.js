@@ -7,44 +7,37 @@ function App() {
   return (
     <div> 
       <CardDeck>
-    <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card bg ="secondary" text="white">
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Cases</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
+        100
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+  <Card bg="danger" text="white">
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Deaths</Card.Title>
       <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
+        500
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+  <Card bg="success" text= "white">
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Recoveries</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
+        300
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+      <small>Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
 </CardDeck>
