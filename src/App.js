@@ -10,9 +10,13 @@ function App() {
   const [latest, setLatest] = useState("")
   useEffect(() => {
     axios
-    .get("https://disease.sh/v2/countries/united%20kingdom")
-    .then(res => {
-      setLatest(res.data);
+    .all([
+      axios.get("https://disease.sh/v2/countries/united%20kingdom"),
+      axios.get("https://disease.sh/v2/countries")
+    ])
+    .then(responseArr => {
+      setLatest(responseArr[0].data);
+      console.log(responseArr[1].data)
     })
     .catch(err => {
       console.log(err);
