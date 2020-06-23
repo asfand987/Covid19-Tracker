@@ -7,7 +7,7 @@ function App() {
   return (
     <div> 
       <CardDeck>
-    <Card bg ="secondary" text="white">
+    <Card bg ="secondary" text="white" className="text-center">
     <Card.Body>
       <Card.Title>Cases</Card.Title>
       <Card.Text>
@@ -18,7 +18,7 @@ function App() {
       <small>Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
-  <Card bg="danger" text="white">
+  <Card bg="danger" text="white" className="text-center">
     <Card.Body>
       <Card.Title>Deaths</Card.Title>
       <Card.Text>
@@ -29,7 +29,7 @@ function App() {
       <small>Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
-  <Card bg="success" text= "white">
+  <Card bg="success" text= "white" className="text-center">
     <Card.Body>
       <Card.Title>Recoveries</Card.Title>
       <Card.Text>
