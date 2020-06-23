@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import './index.css';
 import Form from 'react-bootstrap/Form';
-
+import CardColumns  from "react-bootstrap/CardColumns";
 
 function App() {
   const [latest, setLatest] = useState([]);
@@ -106,7 +106,8 @@ const countries = results.map((data, i) => {
     </Form.Text>
   </Form.Group>
   </Form>
-  <CardDeck>{countries}</CardDeck>
+  <h2 className="text-center" style = {{margin: "30px"}}>List Of All Countries With Covid-19</h2>
+  <CardColumns>{countries}</CardColumns>
     </div>
   );
 }
