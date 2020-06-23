@@ -19,6 +19,8 @@ function App() {
 
   return (
     <div> 
+      <h1 className="text-center" style = {{margin: "30px"}}>Covid-19 Tracker</h1>
+      <h2 className="text-center" style = {{margin: "5px"}}>United Kingdom</h2>
       <CardDeck>
     <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
     <Card.Body>
