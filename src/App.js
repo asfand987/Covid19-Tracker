@@ -4,7 +4,8 @@ import CardDeck from "react-bootstrap/CardDeck"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import './index.css';
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
+
 
 function App() {
   const [latest, setLatest] = useState([]);
@@ -25,13 +26,17 @@ function App() {
     });
 }, []);
 
-const countries = results.map(data => {
+const countries = results.map((data, i) => {
   return (
     <Card
+    key = {i}
       bg="light"
       text="dark"
+      className="text-center" 
+      style = {{margin: "5px"}}
       >
-        <Card.Body className="text-center" style = {{margin: "10px"}}>
+        <Card.Img variant="top" src={data.countryInfo.flag} />
+        <Card.Body>
           <Card.Title>{data.country}</Card.Title>
           <Card.Text>Cases: {data.cases}</Card.Text>
           <Card.Text>Deaths: {data.deaths}</Card.Text>
@@ -101,7 +106,7 @@ const countries = results.map(data => {
     </Form.Text>
   </Form.Group>
   </Form>
-  {countries}
+  <CardDeck>{countries}</CardDeck>
     </div>
   );
 }
