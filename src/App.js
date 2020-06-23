@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from "react-bootstrap/CardDeck"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+import './index.css';
+import Form from 'react-bootstrap/Form'
 
 function App() {
   const [latest, setLatest] = useState("")
@@ -20,7 +22,7 @@ function App() {
   return (
     <div> 
       <h1 className="text-center" style = {{margin: "30px"}}>Covid-19 Tracker</h1>
-      <h2 className="text-center" style = {{margin: "5px"}}>United Kingdom</h2>
+      <h2 className="text-center">United Kingdom</h2>
       <CardDeck>
     <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
     <Card.Body>
@@ -67,6 +69,15 @@ function App() {
     </Card.Footer>
   </Card>
 </CardDeck>
+<h2 className="text-center" style = {{margin: "30px"}}>Search Country</h2>
+<Form>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Control type="text" placeholder="Enter country" />
+    <Form.Text className="text-muted">
+      country
+    </Form.Text>
+  </Form.Group>
+  </Form>
     </div>
   );
 }
