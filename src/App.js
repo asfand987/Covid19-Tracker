@@ -7,7 +7,9 @@ import './index.css';
 import Form from 'react-bootstrap/Form'
 
 function App() {
-  const [latest, setLatest] = useState("")
+  const [latest, setLatest] = useState([]);
+  const [results, setResults] = useState([]);
+
   useEffect(() => {
     axios
     .all([
@@ -16,12 +18,29 @@ function App() {
     ])
     .then(responseArr => {
       setLatest(responseArr[0].data);
-      console.log(responseArr[1].data)
+      setResults(responseArr[1].data);
     })
     .catch(err => {
       console.log(err);
     });
 }, []);
+
+const countries = results.map(data => {
+  return (
+    <Card
+      bg="light"
+      text="dark"
+      >
+        <Card.Body className="text-center" style = {{margin: "10px"}}>
+          <Card.Title>{data.country}</Card.Title>
+          <Card.Text>Cases: {data.cases}</Card.Text>
+          <Card.Text>Deaths: {data.deaths}</Card.Text>
+          <Card.Text>Active: {data.active}</Card.Text>
+          <Card.Text>Recovered: {data.recovered}</Card.Text>
+        </Card.Body>
+      </Card>
+  );
+});
 
   return (
     <div> 
@@ -36,7 +55,7 @@ function App() {
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small>Last updated 3 mins ago</small>
+      <small>Last updated ago</small>
     </Card.Footer>
   </Card>
   <Card bg="danger" text="white" className="text-center" style = {{margin: "10px"}}>
@@ -82,6 +101,7 @@ function App() {
     </Form.Text>
   </Form.Group>
   </Form>
+  {countries}
     </div>
   );
 }
