@@ -10,6 +10,7 @@ import CardColumns  from "react-bootstrap/CardColumns";
 function App() {
   const [latest, setLatest] = useState([]);
   const [results, setResults] = useState([]);
+  const [searchCountry, setSearchCountry] = useState("");
 
   useEffect(() => {
     axios
@@ -27,6 +28,32 @@ function App() {
 }, []);
 
 const countries = results.map((data, i) => {
+  return (
+    <Card
+    key = {i}
+      bg="light"
+      text="dark"
+      className="text-center" 
+      style = {{margin: "5px"}}
+      >
+        <Card.Img variant="top" src={data.countryInfo.flag} />
+        <Card.Body>
+          <Card.Title>{data.country}</Card.Title>
+          <Card.Text>Cases: {data.cases}</Card.Text>
+          <Card.Text>Deaths: {data.deaths}</Card.Text>
+          <Card.Text>Active: {data.active}</Card.Text>
+          <Card.Text>Recovered: {data.recovered}</Card.Text>
+        </Card.Body>
+      </Card>
+  );
+});
+
+
+const filterCountry = results.filter(item => {
+  return item.country === searchCountry
+});
+
+const showCountry = filterCountry.map((data, i) => {
   return (
     <Card
     key = {i}
@@ -100,12 +127,14 @@ const countries = results.map((data, i) => {
 <h2 className="text-center" style = {{margin: "30px"}}>Search Country</h2>
 <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Control type="text" placeholder="Enter country" />
-    <Form.Text className="text-muted">
-      country
-    </Form.Text>
+    <Form.Control
+      type="text"
+      placeholder="Enter country"
+      onChange = {e => setSearchCountry(e.target.value)}
+      />
   </Form.Group>
   </Form>
+  <CardColumns>{showCountry}</CardColumns>
   <h2 className="text-center" style = {{margin: "30px"}}>List Of All Countries With Covid-19</h2>
   <CardColumns>{countries}</CardColumns>
     </div>
