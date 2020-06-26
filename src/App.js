@@ -104,13 +104,13 @@ const getName = filterCountry.map((data, i) => {
 /* Fucntion to return flag of country which has been searched
 const showFlag = filterCountry.map((data, i) => {
   return data.countryInfo.flag
-});
+});style = {{margin: "20px"}}
 */
   return (
     <div > 
-      <h1 className="text-center" color="#000000" style = {{margin: "20px"}}>Covid-19 Tracker</h1>
-      <p className="text-center" color="#000000">Made by Asfand Khan</p>
-      <h2 className="text-center" color="#000000" style = {{margin: "20px"}}>United Kingdom</h2>
+      <h1 className="text-center" style={{color: '#000000' ,margin: "20px"}}>Covid-19 Tracker</h1>
+      <p className="text-center"  style={{color: '#000000' ,margin: "20px"}}>Made by Asfand Khan</p>
+      <h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>United Kingdom</h2>
       <CardDeck style = {{margin: "10px"}}>
       <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
       <Card.Body>
@@ -157,7 +157,7 @@ const showFlag = filterCountry.map((data, i) => {
     </Card.Footer>
   </Card>
 </CardDeck>
-<h2 className="text-center" color="#000000" style = {{margin: "30px"}}>Search Country</h2>
+<h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>Search Country</h2>
 <Form style = {{margin: "20px"}}>
   <Form.Group controlId="countrySearch">
     <Form.Control
@@ -169,9 +169,9 @@ const showFlag = filterCountry.map((data, i) => {
   </Form>
   {/*  To show case country flag when a country is searched
   <Card.Img variant="top" src={showFlag} margin="10px" height="400"/> */}
-  <h2 className="text-center" color="#000000" margin="20px">{"Covid-19 Data For: " + getName}</h2>
+  <h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>{"Covid-19 Data For: " + getName}</h2>
   <Card>{showCountry}</Card>
-  <h2 className="text-center" color="#000000" style = {{margin: "30px"}}>List Of All Countries With Covid-19</h2>
+  <h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>List Of All Countries With Covid-19</h2>
   <CardColumns>{countries}</CardColumns>
     </div>
   );
