@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from "react-bootstrap/CardDeck"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
-import './index.css';
 import Form from 'react-bootstrap/Form';
 import CardColumns  from "react-bootstrap/CardColumns";
 
@@ -159,7 +158,7 @@ const showFlag = filterCountry.map((data, i) => {
   </Card>
 </CardDeck>
 <h2 className="text-center" style = {{margin: "30px"}}>Search Country</h2>
-<Form style = {{margin: "10px"}}>
+<Form style = {{margin: "20px"}}>
   <Form.Group controlId="countrySearch">
     <Form.Control
       type="text"
@@ -170,7 +169,7 @@ const showFlag = filterCountry.map((data, i) => {
   </Form>
   {/*  To show case country flag when a country is searched
   <Card.Img variant="top" src={showFlag} margin="10px" height="400"/> */}
-  <h2 className="text-center" margin="10px">{"Covid-19 Data For: " + getName}</h2>
+  <h2 className="text-center" margin="20px">{"Covid-19 Data For: " + getName}</h2>
   <Card>{showCountry}</Card>
   <h2 className="text-center" style = {{margin: "30px"}}>List Of All Countries With Covid-19</h2>
   <CardColumns>{countries}</CardColumns>
