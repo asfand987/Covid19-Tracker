@@ -31,7 +31,7 @@ function App() {
 const countries = results.map((data, i) => {
   return (
     <Card
-    key = {i}
+      key = {i}
       bg="light"
       text="dark"
       className="text-center" 
@@ -59,7 +59,7 @@ const filterCountry = results.filter(item => {
 
 const showCountry = filterCountry.map((data, i) => {
   return (   
-    <CardDeck>
+    <CardDeck style = {{margin: "10px"}}>
     <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
     <Card.Body> 
     <Card.Title>Cases</Card.Title>
@@ -112,7 +112,7 @@ const showFlag = filterCountry.map((data, i) => {
       <h1 className="text-center" style = {{margin: "20px"}}>Covid-19 Tracker</h1>
       <p className="text-center">Made by Asfand Khan</p>
       <h2 className="text-center" style = {{margin: "20px"}}>United Kingdom</h2>
-      <CardDeck>
+      <CardDeck style = {{margin: "10px"}}>
       <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
       <Card.Body>
       <Card.Title>Cases</Card.Title>
@@ -159,7 +159,7 @@ const showFlag = filterCountry.map((data, i) => {
   </Card>
 </CardDeck>
 <h2 className="text-center" style = {{margin: "30px"}}>Search Country</h2>
-<Form>
+<Form style = {{margin: "10px"}}>
   <Form.Group controlId="countrySearch">
     <Form.Control
       type="text"
