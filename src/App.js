@@ -34,7 +34,7 @@ const countries = results.map((data, i) => {
       bg="light"
       text="dark"
       className="text-center" 
-      style = {{margin: "10px"}}
+      style = {{margin: "10px",   border: "1px solid black"}}
       >
         <Card.Img variant="top" src={data.countryInfo.flag} />
         <Card.Body>
@@ -59,7 +59,7 @@ const filterCountry = results.filter(item => {
 const showCountry = filterCountry.map((data, i) => {
   return (   
     <CardDeck style = {{margin: "10px"}}>
-    <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
+    <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px",   border: "1px solid black"}}>
     <Card.Body> 
     <Card.Title>Cases</Card.Title>
       <Card.Text>
@@ -67,7 +67,7 @@ const showCountry = filterCountry.map((data, i) => {
       </Card.Text>
     </Card.Body>
 </Card>
-<Card bg="danger" text="white" className="text-center" style = {{margin: "10px"}}>
+<Card bg="danger" text="white" className="text-center" style = {{margin: "10px",   border: "1px solid black"}}>
   <Card.Body>
     <Card.Title>Deaths</Card.Title>
     <Card.Text>
@@ -76,7 +76,7 @@ const showCountry = filterCountry.map((data, i) => {
   </Card.Body>
 
 </Card>
-<Card bg="warning" text= "white" className="text-center" style = {{margin: "10px"}}>
+<Card bg="warning" text= "white" className="text-center" style = {{margin: "10px",   border: "1px solid black"}}>
   <Card.Body>
     <Card.Title>Active</Card.Title>
     <Card.Text>
@@ -85,7 +85,7 @@ const showCountry = filterCountry.map((data, i) => {
   </Card.Body>
 
 </Card>
-<Card bg="success" text= "white" className="text-center" style = {{margin: "10px"}}>
+<Card bg="success" text= "white" className="text-center" style = {{margin: "10px",   border: "1px solid black"}}>
   <Card.Body>
     <Card.Title>Recovered</Card.Title>
     <Card.Text>
@@ -107,12 +107,25 @@ const showFlag = filterCountry.map((data, i) => {
 });style = {{margin: "20px"}}
 */
   return (
-    <div > 
-      <h1 className="text-center" style={{color: '#000000' ,margin: "20px"}}>Covid-19 Tracker</h1>
-      <p className="text-center"  style={{color: '#000000' ,margin: "20px"}}>Made by Asfand Khan</p>
-      <h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>United Kingdom</h2>
-      <CardDeck style = {{margin: "10px"}}>
-      <Card bg ="secondary" text="white" className="text-center" style = {{margin: "10px"}}>
+    <div   style={{
+      backgroundColor: '#4682B4',
+    }}> 
+      <h1 className="text-center" style={{color: '#B0E0E6' ,margin: "0px"}}>Covid-19 Tracker</h1>
+      <p className="text-center"  style={{color: '#B0E0E6' ,margin: "20px"}}>Made by Asfand Khan</p>
+      <h2 className="text-center" style={{color: '#B0E0E6' ,margin: "20px"}}>United Kingdom</h2>
+      <CardDeck 
+      style = {{
+        margin: "10px",
+    
+        }}>
+      <Card 
+      bg ="secondary" 
+      text="white" 
+      className="text-center" 
+      style = {{
+        margin: "10px",
+        border: "1px solid black",
+        }}>
       <Card.Body>
       <Card.Title>Cases</Card.Title>
         <Card.Text>
@@ -123,7 +136,14 @@ const showFlag = filterCountry.map((data, i) => {
       <small>{lastUpdated}</small>
     </Card.Footer>
   </Card>
-  <Card bg="danger" text="white" className="text-center" style = {{margin: "10px"}}>
+  <Card 
+    bg="danger" 
+    text="white" 
+    className="text-center" 
+    style = {{
+      margin: "10px",
+      border: "1px solid black",
+      }}>
     <Card.Body>
       <Card.Title>Deaths</Card.Title>
       <Card.Text>
@@ -134,7 +154,14 @@ const showFlag = filterCountry.map((data, i) => {
       <small>{lastUpdated}</small>
     </Card.Footer>
   </Card>
-  <Card bg="warning" text= "white" className="text-center" style = {{margin: "10px"}}>
+  <Card 
+    bg="warning" 
+    text= "white" 
+    className="text-center" 
+    style = {{
+        margin: "10px",
+        border: "1px solid black",
+        }}>
     <Card.Body>
       <Card.Title>Active</Card.Title>
       <Card.Text>
@@ -145,7 +172,14 @@ const showFlag = filterCountry.map((data, i) => {
       <small>{lastUpdated}</small>
     </Card.Footer>
   </Card>
-  <Card bg="success" text= "white" className="text-center" style = {{margin: "10px"}}>
+  <Card 
+    bg="success" 
+    text= "white" 
+    className="text-center" 
+    style = {{
+        margin: "10px",
+        border: "1px solid black",
+    }}>
     <Card.Body>
       <Card.Title>Recovered</Card.Title>
       <Card.Text>
@@ -157,7 +191,7 @@ const showFlag = filterCountry.map((data, i) => {
     </Card.Footer>
   </Card>
 </CardDeck>
-<h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>Search Country</h2>
+<h2 className="text-center" style={{color: '#B0E0E6' ,margin: "20px"}}>Search Country</h2>
 <Form style = {{margin: "20px"}}>
   <Form.Group controlId="countrySearch">
     <Form.Control
@@ -169,9 +203,9 @@ const showFlag = filterCountry.map((data, i) => {
   </Form>
   {/*  To show case country flag when a country is searched
   <Card.Img variant="top" src={showFlag} margin="10px" height="400"/> */}
-  <h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>{"Covid-19 Data For: " + getName}</h2>
-  <Card>{showCountry}</Card>
-  <h2 className="text-center" style={{color: '#000000' ,margin: "20px"}}>List Of All Countries With Covid-19</h2>
+  <h2 className="text-center" style={{color: '#B0E0E6' ,margin: "20px"}}>{"Covid-19 Data For: " + getName}</h2>
+  <Card style={{color: '#4682B4'}}>{showCountry}</Card>
+  <h2 className="text-center" style={{color: '#B0E0E6' ,margin: "20px"}}>List Of All Countries With Covid-19</h2>
   <CardColumns>{countries}</CardColumns>
     </div>
   );
