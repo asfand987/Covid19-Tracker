@@ -34,7 +34,10 @@ const countries = results.map((data, i) => {
       bg="light"
       text="dark"
       className="text-center" 
-      style = {{margin: "10px", border: "1px solid black"}}
+      style = {{
+        margin: "10px", 
+        border: "1px solid black"
+      }}
       >
         <Card.Img variant="top" src={data.countryInfo.flag} />
         <Card.Body>
@@ -71,7 +74,7 @@ const showCountry = filterCountry.map((data, i) => {
   <Card.Body>
     <Card.Title>Deaths</Card.Title>
     <Card.Text>
-    {data.deaths}
+        {data.deaths}
     </Card.Text>
   </Card.Body>
 
