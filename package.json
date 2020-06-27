@@ -1,6 +1,6 @@
 {
-  "homepage": "http://asfand987.github.io/Covid-Tracker",
-  "name": "Covid-Tracker",
+  "homepage": "http://asfand987.github.io/Covid19-Tracker",
+  "name": "Covid19-Tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
