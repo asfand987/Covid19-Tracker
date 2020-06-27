@@ -6,7 +6,6 @@ import axios from "axios";
 import Form from 'react-bootstrap/Form';
 import CardColumns  from "react-bootstrap/CardColumns";
 
-
 function App() {
   const [latest, setLatest] = useState([]);
   const [results, setResults] = useState([]);
