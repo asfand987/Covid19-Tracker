@@ -4,7 +4,7 @@ Website which tracks all countries around the world which have Covid19 cases.
 
 ## Build
 
-Built using React
+Built with the help of React and React-bootstrap.
 
 ## URL
 
